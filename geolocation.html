@@ -1,0 +1,33 @@
+
+<html>
+
+<head>
+    <script src="p5.min.js"></script>
+    <script src="p5.geolocation.js"></script>
+</head>
+
+<body>
+  <h1 id="dist"></h1>
+    <script>
+      var distance;
+
+     // watchOptions = {
+    //    enableHighAccuracy: true
+    //    timeout:2000
+    //    maximumAge:0
+     // }
+      
+      function setup() {
+        distance = calcGeoDistance(21.311949, -157.838387, 21.294342, -157.834422, 'mi');
+        document.getElementById('dist').innerHTML = distance.toFixed(5);
+        watchPosition(positionChanged)
+      }
+      
+      function positionChanged() {
+        document.position.latitude;
+        document.position.longitude;
+      }
+    </script>
+</body>
+
+</html>
